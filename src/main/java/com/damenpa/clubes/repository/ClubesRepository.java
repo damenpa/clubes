@@ -4,6 +4,6 @@ import org.springframework.stereotype.Repository;
 import com.damenpa.clubes.entity.Conquistador;
 
 @Repository
-public interface ConquistadorRepository extends JpaRepository<Conquistador, Integer> {
+public interface ClubesRepository extends JpaRepository<Conquistador, Integer> {
 }
 
