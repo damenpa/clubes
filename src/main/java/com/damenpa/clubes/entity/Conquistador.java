@@ -25,7 +25,7 @@ public class Conquistador {
     @JoinColumn(name = "clase_id")
     private Clase clase;
 
-    @ManyToOne
-    @JoinColumn(name = "iglesia_id", referencedColumnName = "id")
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn(name = "iglesia_id")
     private Iglesia iglesia;
 }

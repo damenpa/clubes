@@ -1,0 +1,57 @@
+### GET request to example server
+GET http://localhost:8080/conquistadores
+
+###
+
+POST http://localhost:8080/conquistadores
+Content-Type: application/json
+
+        {
+            "nombre": "Pepe",
+            "edad": 15,
+            "clase": {
+                "id": 3
+            },
+            "correo": "Pepe@gmail.com",
+            "telefono": "12345678",
+            "apPaterno": "Buendia",
+            "apMaterno": "Arcadio",
+            "iglesia": {
+                "id": 3
+            }
+        }
+###
+
+PUT http://localhost:8080/conquistadores/8
+Content-Type: application/json
+
+{
+  "nombre": "Pepe Nuevo",
+  "edad": 30,
+  "clase": {
+    "id": 3
+  },
+  "correo": "Pepe@gmail.com",
+  "telefono": "12345678",
+  "apPaterno": "Buendia",
+  "apMaterno": "Mendoza",
+  "iglesia": {
+    "id": 3
+  }
+}
+###
+POST http://localhost:8080/conquistadores
+Content-Type: application/json
+
+{
+  "nombre": "Nuevo Conquistador",
+  "edad": 20,
+  "correo": "nuevo@correo.com",
+  "telefono": "123456789",
+  "apPaterno": "Gomez",
+  "apMaterno": "Lopez",
+  "claseId": 3,
+  "iglesiaId": 2
+}
+
+###
