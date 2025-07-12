@@ -28,5 +28,7 @@ public class Directiva {
     @ManyToOne
     @JoinColumn(name = "iglesia_id", referencedColumnName = "id")
     private Iglesia iglesia;
+
+    private String contraseña;
 }
 

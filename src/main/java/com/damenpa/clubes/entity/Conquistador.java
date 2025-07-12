@@ -28,4 +28,6 @@ public class Conquistador {
     @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "iglesia_id")
     private Iglesia iglesia;
+
+    private String contraseña;
 }

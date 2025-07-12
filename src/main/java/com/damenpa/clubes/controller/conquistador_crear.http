@@ -9,16 +9,13 @@ Content-Type: application/json
         {
             "nombre": "Pepe",
             "edad": 15,
-            "clase": {
-                "id": 3
-            },
-            "correo": "Pepe@gmail.com",
+            "claseId": 3,
+            "correo": "alfonso@gmail.com",
             "telefono": "12345678",
             "apPaterno": "Buendia",
             "apMaterno": "Arcadio",
-            "iglesia": {
-                "id": 3
-            }
+            "iglesiaId": 1,
+            "contraseña": "gato123"
         }
 ###
 
@@ -28,16 +25,13 @@ Content-Type: application/json
 {
   "nombre": "Pepe Nuevo",
   "edad": 30,
-  "clase": {
-    "id": 3
-  },
+  "claseId": 3,
   "correo": "Pepe@gmail.com",
   "telefono": "12345678",
   "apPaterno": "Buendia",
   "apMaterno": "Mendoza",
-  "iglesia": {
-    "id": 3
-  }
+  "iglesiaId": 1,
+  "contraseña": "gato123"
 }
 ###
 POST http://localhost:8080/conquistadores

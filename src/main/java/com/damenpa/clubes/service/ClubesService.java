@@ -6,6 +6,7 @@ import com.damenpa.clubes.repository.ClaseRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import com.damenpa.clubes.entity.Conquistador;
@@ -20,10 +21,12 @@ public class ClubesService {
     private final  IglesiaRepository iglesiaRepository;
     private final ClaseRepository claseRepository;
     private final ObjectMapper objectMapper;
+    private final PasswordEncoder passwordEncoder;
 
     public Conquistador guardarDesdeDto(ConquistadorDto dto) {
         Conquistador conquistador = objectMapper.convertValue(dto, Conquistador.class);
 
+        conquistador.setContraseña(passwordEncoder.encode(dto.getContraseña()));
         conquistador.setIglesia(iglesiaRepository.findById(dto.getIglesiaId())
                 .orElseThrow(() -> new RuntimeException("Iglesia no encontrada")));
         conquistador.setClase(claseRepository.findById(dto.getClaseId())
