@@ -13,4 +13,5 @@ public class ConquistadorDto {
     private String apMaterno;
     private int claseId;
     private int iglesiaId;
+    private String contraseña;
 }
